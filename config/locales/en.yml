@@ -5,6 +5,11 @@ en:
     header_home: "Home"
     header_help: "Help"
     header_login: "Login"
+    header_user: "Users"
+    header_account: "Account"
+    header_pro5: "Profile"
+    header_setting: "Settings"
+    log_out: "Log out"
     github_link: "Git Hub"
     footer_about: "About"
     contact: "Contact"
@@ -21,7 +26,8 @@ en:
     p_help: "Find me in app/views/static_pages/help.html.erb"
     home:
       h1_welcome: "Welcome to my Blog App"
-      linkto_signup: "Sign up"
+      linkto_signup: "Sign up now !!!"
+      get_account: "You don't have account ? "
     about:
       ptag_des: "Find me in app/views/static_pages/about.html.erb"
   users:
@@ -36,8 +42,16 @@ en:
     new:
       sign_up: "Sign up"
   sessions:
+    login_sucess: "Login successful !!!"
+    log_uot_success: "Logout successful !!!"
+    err_login: "Invalid email/password combination"
     new:
-      login_des: "Find me in app/views/sessions/new.html.erb"
-      h1_login: "Login Page"
+      login_title: "Login"
+      h1_login: "Login"
+      new_user: "New user? "
+      sign_up_now: "Sign up now! "
+      label_email: "email"
+      label_password: "password"
+      span_rmb_me: "Remember me on this computer"
 
 
