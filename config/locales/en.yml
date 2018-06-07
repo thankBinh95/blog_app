@@ -1,2 +1,43 @@
 en:
-  hello: "Hello world"
+  static_pages:
+    base_title: "Blog App"
+    app_name: "Blog App"
+    header_home: "Home"
+    header_help: "Help"
+    header_login: "Login"
+    github_link: "Git Hub"
+    footer_about: "About"
+    contact: "Contact"
+    footer_author: "View source app in "
+    form_error: "The form contains"
+    title_about: "About"
+    h1_about: "About"
+    title_contact: "Contact"
+    h1_contact: "Contact"
+    title_help: "Help"
+    h1_help: "Help"
+    title_home: "Home"
+    h1_home: "Home"
+    p_help: "Find me in app/views/static_pages/help.html.erb"
+    home:
+      h1_welcome: "Welcome to my Blog App"
+      linkto_signup: "Sign up"
+    about:
+      ptag_des: "Find me in app/views/static_pages/about.html.erb"
+  users:
+    index_title: "Users"
+    h1_index: "Index Users Page"
+    label_name: "Name"
+    label_email: "Email"
+    label_pass: "Password"
+    label_pass_cf: "password_confirmation "
+    flash_create_success: "User created success !!!"
+    flash_user_nfound: "User not found !!!"
+    new:
+      sign_up: "Sign up"
+  sessions:
+    new:
+      login_des: "Find me in app/views/sessions/new.html.erb"
+      h1_login: "Login Page"
+
+
