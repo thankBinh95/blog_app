@@ -1,0 +1,10 @@
+ <%= form_for :entry, url: entry_path do |f| %>
+
+  <%= f.label t "entry.label_title" %>
+  <%= f.text_field :title, class: "form-control" %>
+
+  <%= f.label t "entry.label_content" %>
+  <%= f.text_area :content, class: "form-control" %>
+
+  <%= f.submit "entry.button_entry", class: "btn btn-primary" %>
+<% end %>

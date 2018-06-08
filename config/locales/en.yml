@@ -25,7 +25,7 @@ en:
     h1_home: "Home"
     p_help: "Find me in app/views/static_pages/help.html.erb"
     home:
-      h1_welcome: "Welcome to my Blog App"
+      h1_welcome: "Welcome to Blog App"
       linkto_signup: "Sign up now !!!"
       get_account: "You don't have account ? "
     about:
@@ -58,10 +58,22 @@ en:
       label_password: "password"
       span_rmb_me: "Remember me on this computer"
   entry:
+    button_entry: "Create a post"
+    create_entry: "Create Post"
+    flash_entry_nfound: "Entry not found"
+    flash_create_entry: "Entry create success"
     post_delete: "Delete"
     post_confirm: "You sure?"
     posted: "Posted"
     ago: " ago"
+    label_title: "Title"
+    label_content: "Content"
+    flash_create_success: "Post created successfully"
+    flash_create_failse: "Create post failed !!!"
+    new:
+      title: "Post"
+      button_text: "Create"
+      h1_post: "Create a post"
 
 
 

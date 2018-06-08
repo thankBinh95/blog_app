@@ -11,7 +11,11 @@
   </aside>
   <div class="col-md-8">
     <% if @user.entries.any? %>
-      <h3><%= t ".posts" %> (<%= t ".total" %><%= @user.entries.count %> <%= t ".post" %>)</h3>
+      <h3><%= t ".posts" %> (<%= t ".total" %><%= @user.entries.count %> <%= t ".post" %>)
+      <% if current_user?(@user) %>
+        <%= link_to t("entry.create_entry"), entry_path, class: "btn btn-lg btn-primary" %>
+      <% end %>
+      </h3>
       <ol class="entries">
         <%= render @entries %>
       </ol>
