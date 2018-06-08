@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @entries = @user.entries.order_entry.paginate page: params[:page]
+    @entries = @user.entries.order_entry.paginate(page: params[:page],
+      per_page: 10)
   end
 
   def new

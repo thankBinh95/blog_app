@@ -8,10 +8,10 @@ class EntriesController < ApplicationController
   def create
     @entry = current_user.entries.build(entries_params)
     if @entry.save
-      flash[:success] = "entry.flash_create_success"
+      flash[:success] = t "entry.flash_create_success"
       redirect_to current_user
     else
-      flash.now[:danger] = "entry.flash_create_failse"
+      flash.now[:danger] = t "entry.flash_create_failse"
       render :new
     end
   end

@@ -16,9 +16,11 @@
         <%= link_to t("entry.create_entry"), entry_path, class: "btn btn-lg btn-primary" %>
       <% end %>
       </h3>
+      <%= will_paginate @entries %>
       <ol class="entries">
         <%= render @entries %>
       </ol>
+      <%= will_paginate @entries %>
     <% end %>
   </div>
 </div>
