@@ -3,3 +3,5 @@ length_max:
   email: 255
 length_min:
   password: 3
+content_maximum: 140
+picture_size: 5

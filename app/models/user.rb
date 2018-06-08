@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
+  has_many :entries, dependent: :destroy
   before_save :downcase_email
 
   validates :name, presence: true, length: {maximum: Settings.length_max.name}
@@ -13,6 +14,8 @@ class User < ApplicationRecord
 
   validates :password, presence: true, length: {minimum:
     Settings.length_min.password}, allow_nil: true
+
+  scope :order_name, ->{order id: :asc}
 
   class << self
     def digest string
@@ -50,6 +53,6 @@ class User < ApplicationRecord
   private
 
   def downcase_email
-    self.email = email.downcase!
+    self.email = email.downcase
   end
 end

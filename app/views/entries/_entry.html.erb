@@ -1,0 +1,14 @@
+<li id="entry-<%= entry.id %>">
+  <span class="user"><%= link_to entry.user.name, entry.user %></span>
+  <span class="title"><%= entry.title %></span>
+  <span class="content"><%= entry.content %></span>
+  <span class="timestamp">
+    <%= t "entry.posted" %> <%= time_ago_in_words(entry.created_at) %>
+    <%= t "entry.ago" %>   -
+    <%= entry.created_at.strftime "%m/%d/%Y" %>
+    <% if current_user?(entry.user) %>
+      <%= link_to t("entry.post_delete"), entry, method: :delete,
+        data: { confirm: t("entry.post_confirm") } %>
+    <% end %>
+  </span>
+</li>

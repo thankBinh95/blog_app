@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
   before_action :find_user, only: %i(show edit update destroy)
 
-  def index; end
+  def index
+    @users = User.order_name
+  end
 
-  def show; end
+  def show
+    @entries = @user.entries
+  end
 
   def new
     @user = User.new
