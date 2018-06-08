@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   get "sessions/new"
+  get "entries/new"
+  post "/entry", to: "entries#create"
+  get "/entry", to: "entries#new"
   get "password_resets/new"
   get "password_resets/edit"
   get "sessions/new"

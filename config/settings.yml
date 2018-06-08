@@ -4,4 +4,5 @@ length_max:
 length_min:
   password: 3
 content_maximum: 140
+title_maximum: 50
 picture_size: 5
