@@ -7,7 +7,7 @@ en:
     header_login: "Login"
     header_user: "Users"
     header_account: "Account"
-    header_pro5: "Profile"
+    header_pro5: "My profile"
     header_setting: "Settings"
     log_out: "Log out"
     github_link: "Git Hub"
@@ -32,7 +32,7 @@ en:
       ptag_des: "Find me in app/views/static_pages/about.html.erb"
   users:
     index_title: "Users"
-    h1_index: "Index Users Page"
+    h1_index: "Users List"
     label_name: "Name"
     label_email: "Email"
     label_pass: "Password"
@@ -41,6 +41,10 @@ en:
     flash_user_nfound: "User not found !!!"
     new:
       sign_up: "Sign up"
+    show:
+      posts: "Post List"
+      post: "post"
+      total: " Total: "
   sessions:
     login_sucess: "Login successful !!!"
     log_uot_success: "Logout successful !!!"
@@ -53,5 +57,11 @@ en:
       label_email: "email"
       label_password: "password"
       span_rmb_me: "Remember me on this computer"
+  entry:
+    post_delete: "Delete"
+    post_confirm: "You sure?"
+    posted: "Posted"
+    ago: " ago"
+
 
 

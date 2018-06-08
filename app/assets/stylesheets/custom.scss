@@ -223,7 +223,7 @@ input {
   }
 }
 
-.microposts {
+.entries {
   list-style: none;
   padding: 0;
   li {
@@ -231,26 +231,22 @@ input {
     border-top: 1px solid $light-color;
   }
   .user {
-    margin-top: 5em;
     padding-top: 0;
   }
   .content {
     display: block;
     margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
+  }
+  .title {
+    margin-left: 60px;
+    font-weight: bold;
+    font-size:  20px;
+    color: $green-dark;
   }
   .timestamp {
     color: $gray-light;
     display: block;
     margin-left: 60px;
-  }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
   }
 }
 
