@@ -24,10 +24,19 @@ en:
     title_home: "Home"
     h1_home: "Home"
     p_help: "Find me in app/views/static_pages/help.html.erb"
+    folowing: "folowing"
+    folower: "folower"
+    new_post: "New post"
+    place_holder_title: "Title..."
+    place_holder_content: "Compose new post..."
+    submit_post: "Post"
+    view_pro_5: "View my profile"
+    total_post: "Total : "
+    posts: "posts"
     home:
       h1_welcome: "Welcome to Blog App"
-      linkto_signup: "Sign up now !!!"
-      get_account: "You don't have account ? "
+      linkto_signup: "Sign up"
+      get_account: "Welcome !  Guest.  Please login or register to join us ^^"
     about:
       ptag_des: "Find me in app/views/static_pages/about.html.erb"
   users:
@@ -39,6 +48,11 @@ en:
     label_pass_cf: "password_confirmation "
     flash_create_success: "User created success !!!"
     flash_user_nfound: "User not found !!!"
+    flash_pl_login: "Please log in"
+    following: "Following"
+    follower: "Follower"
+    submit_follow: "Follow"
+    submit_unfollow: "Unfollow"
     new:
       sign_up: "Sign up"
     show:
@@ -69,7 +83,7 @@ en:
     label_title: "Title"
     label_content: "Content"
     flash_create_success: "Post created successfully"
-    flash_create_failse: "Create post failed !!!"
+    flash_create_failse: "Created post failed !!!, title or content is'nt empty..."
     new:
       title: "Post"
       button_text: "Create"

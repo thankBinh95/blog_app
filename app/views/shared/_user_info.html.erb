@@ -1,0 +1,3 @@
+<h1 ><%= current_user.name %></h1>
+<span><%= link_to t("static_pages.view_pro_5"), current_user %></span>
+<span><%= t "static_pages.total_post" %><%= pluralize(current_user.entries.count, t("static_pages.posts")) %></span>

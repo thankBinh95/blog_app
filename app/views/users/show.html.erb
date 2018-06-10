@@ -1,26 +1,24 @@
-  <% provide :title, @user.name %>
+<% provide :title, @user.name %>
   <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
         <%= @user.name %>
-        <br/>
-        <%= @user.email %>
       </h1>
+    </section>
+    <section class="stats">
+      <%= render "shared/stats" %>
     </section>
   </aside>
   <div class="col-md-8">
+    <%= render "follow_form" if logged_in? %>
     <% if @user.entries.any? %>
-      <h3><%= t ".posts" %> (<%= t ".total" %><%= @user.entries.count %> <%= t ".post" %>)
-      <% if current_user?(@user) %>
-        <%= link_to t("entry.create_entry"), entry_path, class: "btn btn-lg btn-primary" %>
-      <% end %>
-      </h3>
-      <%= will_paginate @entries %>
+      <h3><%= t ".posts" %> (<%= @user.entries.count %>)</h3>
       <ol class="entries">
+        <%= will_paginate @entries %>
         <%= render @entries %>
+        <%= will_paginate @entries %>
       </ol>
-      <%= will_paginate @entries %>
     <% end %>
   </div>
 </div>

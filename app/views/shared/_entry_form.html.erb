@@ -1,0 +1,9 @@
+<%= form_for(@entry) do |f| %>
+  <div class="field">
+    <span style="font-size: 20px; color: #1f71f4;"><%= t("static_pages.new_post") %></span>
+    <br/>
+    <%= f.text_field :title, placeholder: t("static_pages.place_holder_title") %>
+    <%= f.text_area :content, placeholder: t("static_pages.place_holder_content") %>
+  </div>
+  <%= f.submit t("static_pages.submit_post"), class: "btn btn-primary" %>
+<% end %>

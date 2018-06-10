@@ -11,8 +11,9 @@ class EntriesController < ApplicationController
       flash[:success] = t "entry.flash_create_success"
       redirect_to current_user
     else
-      flash.now[:danger] = t "entry.flash_create_failse"
-      render :new
+      flash[:danger] = t "entry.flash_create_failse"
+      @feed_items = []
+      redirect_to root_path
     end
   end
 

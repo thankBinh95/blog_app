@@ -1,12 +1,30 @@
 <% provide :title, t("static_pages.title_home") %>
+<% if !logged_in? %>
 <div class="center jumbotron">
   <h1><%= t "static_pages.home.h1_welcome" %></h1>
-  <% if !logged_in? %>
-    <h3 style="color: red"><%= t ".get_account" %>
-        <%= link_to t(".linkto_signup"), signup_path, class: "btn btn-lg btn-primary" %>
-      <% end %>
-    </h3>
+    <h2 style="color: green"><%= t ".get_account" %><br/><br/>
+        <%= link_to t(".linkto_signup"), signup_path, class: "btn btn-lg btn-success" %>&nbsp; &nbsp; &nbsp;
+        <%= link_to "Login", login_path, class: "btn btn-lg btn-primary" %>
+    </h2>
 </div>
-<div class="col-md">
-<%= link_to "View Posts", users_path, class: "btn btn-lg btn-primary" %>
-</div>
+<% else %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="stats">
+        <%= render "shared/stats" %>
+      </section>
+      <section class="entry_form">
+        <%= render "shared/entry_form" %>
+      </section>
+    </aside>
+<% end %>
+    <div class="entries col-md-8">
+      <%= render "shared/feed" %>
+    </div>
+  </div>
+
+
+
