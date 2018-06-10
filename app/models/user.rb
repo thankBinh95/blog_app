@@ -1,6 +1,15 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
   has_many :entries, dependent: :destroy
+  has_many :active_interactives, class_name: Interactive.name,
+    foreign_key: :follower_id,
+    dependent: :destroy
+  has_many :passive_interactives, class_name: Interactive.name,
+    foreign_key: :followed_id,
+    dependent: :destroy
+  has_many :following, through: :active_interactives,  source: :followed
+  has_many :followers, through: :passive_interactives, source: :follower
+
   before_save :downcase_email
 
   validates :name, presence: true, length: {maximum: Settings.length_max.name}
@@ -48,6 +57,22 @@ class User < ApplicationRecord
     self.reset_token = User.new_token
     update_attribute :reset_digest,  User.digest(reset_token)
     update_attribute :reset_sent_at, Time.zone.now
+  end
+
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include? other_user
+  end
+
+  def follow other_user
+    active_interactives.create followed_id: other_user.id
+  end
+
+  def feed
+    Entry.order_entry
   end
 
   private

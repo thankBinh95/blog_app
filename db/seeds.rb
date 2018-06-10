@@ -3,7 +3,7 @@ User.create!(name: "ADMIN",
   password: "zxcvbn",
   password_confirmation: "zxcvbn")
 
-99.times do |n|
+20.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "zxcvbn"
@@ -12,10 +12,17 @@ User.create!(name: "ADMIN",
     password: password,
     password_confirmation: password)
 end
-users = User.order(:created_at).take(10)
+users = User.order(:created_at).take(6)
 50.times do
   title = Faker::SiliconValley.invention
   content = Faker::Lorem.sentence(5)
-  users.each { |user| user.entries.create!(content: content,
-    title: title) }
+  users.each { |user| user.entries.create!(title: title, content: content) }
 end
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
+
+
