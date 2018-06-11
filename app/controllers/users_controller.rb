@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :find_user, only: %i(show edit update destroy)
   before_action :logged_in_user, only:
     %i(edit update destroy following followers)
+  before_action :correct_user, only: %i(edit update)
 
   def index
     @users = User.order_name.paginate(page: params[:page],
@@ -17,9 +18,14 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def edit; end
-
-  def update; end
+ def update
+    if @user.update_attributes user_params
+      flash[:success] = t ".flash_update_sc"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
 
   def destroy
     if @user.destroy
@@ -72,5 +78,10 @@ class UsersController < ApplicationController
     return if logged_in?
     flash.now[:danger] = t ".flash_pl_login"
     redirect_to login_url
+  end
+
+  def correct_user
+    @user = User.find_by id: params[:id]
+    redirect_to(root_url) unless current_user?(@user)
   end
 end

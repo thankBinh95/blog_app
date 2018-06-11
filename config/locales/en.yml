@@ -53,6 +53,7 @@ en:
     follower: "Follower"
     submit_follow: "Follow"
     submit_unfollow: "Unfollow"
+    flash_update_sc: "Update successful !"
     new:
       sign_up: "Sign up"
     show:
@@ -82,8 +83,8 @@ en:
     ago: " ago"
     label_title: "Title"
     label_content: "Content"
-    flash_create_success: "Post created successfully"
-    flash_create_failse: "Created post failed !!!, title or content is'nt empty..."
+    flash_create_success: "Post create successfully"
+    flash_create_failse: "Create post failed !!!, title or content is'nt empty..."
     new:
       title: "Post"
       button_text: "Create"

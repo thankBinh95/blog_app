@@ -1,5 +1,5 @@
-User.create!(name: "ADMIN",
-  email: "admin@abc.com",
+User.create!(name: "Guest",
+  email: "guest@abc.com",
   password: "zxcvbn",
   password_confirmation: "zxcvbn")
 
@@ -20,8 +20,8 @@ users = User.order(:created_at).take(6)
 end
 users = User.all
 user  = users.first
-following = users[2..50]
-followers = users[3..40]
+following = users[1..20]
+followers = users[1..20]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
 

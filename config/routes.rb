@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'comment/new'
+  get 'comment/edit'
+  get 'comment/create'
+  get 'comment/destroy'
   get "sessions/new"
   #get "entries/new"
   #post "/entry", to: "entries#create"
